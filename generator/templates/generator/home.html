@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<div class="container text-center">
+    <br>
+<h1 class="btn btn-secondary btn-lg btn-block" style='color:green; text-align:center; background:#d1f5d3; border-radius:10px'>
+    <i>Password Generator!</i>
+</h1>
+
+<form style='color:green; text-align:center;  margin:20px 100px 0 100px;
+border-radius:10px' action="{% url 'password' %}">
+    <select name="length">
+        <option value="6" >6</option>
+        <option value="7" >7</option>
+        <option value="8" >8</option>
+        <option value="9" >9</option>
+        <option value="10" selected="selected">10</option>
+        <option value="11" >11</option>
+        <option value="12" >12</option>
+        <option value="13" >13</option>
+        <option value="14" >14</option>
+        <option value="15" >15</option>
+    </select> Password Length
+    <br>
+    <input type=radio name="numbers"> Numbers
+    <br>
+    <input type=radio name="upperCase"> Upper Case
+    <br>
+    <input type=radio name="specialChar"> Special Characters
+    <br>
+    <br>
+    <input type=submit value="Generate Password" class="btn btn-secondary">
+</form>
+<br>
+<br>
+<a href="{% url 'about-app' %}" class="btn btn-info">About App</a>
+</div>
